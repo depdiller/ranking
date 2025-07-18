@@ -1,0 +1,92 @@
+yandex-cloud-resourcemanager:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-resourcemanager/mcp-yandex-cloud-resourcemanager"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    YC_INSECURE: "1"
+  description: "Manage resource hierarchy: clouds, folders, and organizations"
+  tags:
+    - resourcemanager
+    - folders
+    - clouds
+    - organization
+
+yandex-cloud-compute:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-compute/mcp-yandex-cloud-compute"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    YC_INSECURE: "1"
+  description: "Manage compute instances, images, disks, and snapshots in Yandex Cloud"
+  tags:
+    - compute
+    - vm
+    - instances
+    - disks
+    - snapshots
+
+yandex-cloud-vpc:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-vpc/mcp-yandex-cloud-vpc"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    YC_INSECURE: "1"
+  description: "Manage virtual networks, subnets, routes, and security groups"
+  tags:
+    - vpc
+    - network
+    - subnet
+    - routing
+    - security-groups
+
+yandex-cloud-serverless:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-serverless/mcp-yandex-cloud-serverless"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+  description: "Manage serverless functions, API gateways, and containers"
+  tags:
+    - serverless
+    - functions
+    - api-gateway
+    - containers
+    - faas
+
+yandex-cloud-iam:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-iam/mcp-yandex-cloud-iam"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+  description: "Manage IAM policies, roles, service accounts, and access bindings"
+  tags:
+    - iam
+    - access
+    - roles
+    - service-accounts
+    - permissions
+
+yandex-cloud-ydb:
+  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-ydb/mcp-yandex-cloud-ydb"
+  args:
+    - --transport
+    - stdio
+  env:
+    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+  description: "Manage distributed YDB databases, tables, and queries"
+  tags:
+    - ydb
+    - database
+    - distributed
+    - nosql
+    - tables
+  tools: []

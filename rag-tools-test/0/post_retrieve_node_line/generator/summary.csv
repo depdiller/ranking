@@ -1,0 +1,2 @@
+filename,module_name,module_params,execution_time,average_output_token,bleu,meteor,rouge,sem_score,is_best
+0.parquet,LlamaIndexLLM,"{'llm': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'base_url': 'https://api.eliza.yandex.net/raw/anthropic', 'api_key': 'y1__xDl3MSRpdT-ARiuKyCc4dgCI97IX01agJKQ2rqtN3U7oV5CCeQ'}",3.9288501317581432,2.696629213483146,0.0,0.0,0.0,0.45327129936042226,True

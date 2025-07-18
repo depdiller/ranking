@@ -1,0 +1,5 @@
+node_line_name,node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
+retrieve_node_line,retrieval,0.parquet,VectorDB,"{'top_k': 25, 'vectordb': 'chroma_sentence_transformers'}",0.0270723291997159
+retrieve_node_line,passage_reranker,0.parquet,PassReranker,{'top_k': 5},9.03646597701512e-06
+post_retrieve_node_line,prompt_maker,0.parquet,Fstring,"{'prompt': 'Answer the following question about Yandex Cloud infrastructure: how to {query}? \n. Info to retrieve answer from: {retrieved_contents} \n. Give as answer ONLY on word - name of tool you would use too solve given problem? Tool name must be retrieved from given context, if you cannot find correct tool there just answer - NONE.'}",8.278348472680939e-06
+post_retrieve_node_line,generator,0.parquet,LlamaIndexLLM,"{'llm': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'base_url': 'https://api.eliza.yandex.net/raw/anthropic', 'api_key': 'y1__xDl3MSRpdT-ARiuKyCc4dgCI97IX01agJKQ2rqtN3U7oV5CCeQ'}",0.6560183026817408

@@ -1,0 +1,11 @@
+[project]
+name = "dataset-creation"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-mcp-adapters<=0.1.9",
+    "pandas>=2.3.1",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.10.1",
+]

@@ -1,0 +1,7 @@
+vectordb:
+- client_type: persistent
+  collection_name: sentence_transformers
+  db_type: chroma
+  embedding_model: yandex_sentence_transformers
+  name: chroma_sentence_transformers
+  path: resources/chroma
