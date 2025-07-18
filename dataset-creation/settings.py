@@ -11,8 +11,6 @@ import re
 
 from mcp_server import MCPServerConfig
 
-logger = logging.getLogger()
-
 
 class Settings(BaseSettings):
     """Global application settings."""
@@ -89,12 +87,6 @@ def resolve_env_vars_in_dict(input_data: dict[str, str]) -> dict[str, str]:
                 if env_value is not None:
                     resolved_data[key] = env_value
                 else:
-                    logger.warning(
-                        "Environment variable not found for config key, using original value.",
-                        key=key,
-                        placeholder=value,
-                        variable_name=var_name,
-                    )
                     resolved_data[key] = value
             else:
                 resolved_data[key] = value
@@ -118,10 +110,8 @@ def resolve_env_var(value: str) -> str:
             var_name = match.group(1)
             env_value = os.environ.get(var_name)
             if env_value is not None:
-                logger.info(f"Resolved env var {var_name} to {env_value}")
                 return env_value
             else:
-                logger.warning(f"Environment variable {var_name} not found")
                 return match.group(0)  # Return original if not found
 
         pattern = r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}'

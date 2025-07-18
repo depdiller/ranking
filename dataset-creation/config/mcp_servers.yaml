@@ -1,10 +1,10 @@
 yandex-cloud-resourcemanager:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-resourcemanager/mcp-yandex-cloud-resourcemanager"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-resourcemanager/mcp-yandex-cloud-resourcemanager"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
     YC_INSECURE: "1"
   description: "Manage resource hierarchy: clouds, folders, and organizations"
   tags:
@@ -14,12 +14,12 @@ yandex-cloud-resourcemanager:
     - organization
 
 yandex-cloud-compute:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-compute/mcp-yandex-cloud-compute"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-compute/mcp-yandex-cloud-compute"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
     YC_INSECURE: "1"
   description: "Manage compute instances, images, disks, and snapshots in Yandex Cloud"
   tags:
@@ -30,12 +30,12 @@ yandex-cloud-compute:
     - snapshots
 
 yandex-cloud-vpc:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-vpc/mcp-yandex-cloud-vpc"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-vpc/mcp-yandex-cloud-vpc"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
     YC_INSECURE: "1"
   description: "Manage virtual networks, subnets, routes, and security groups"
   tags:
@@ -46,12 +46,12 @@ yandex-cloud-vpc:
     - security-groups
 
 yandex-cloud-serverless:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-serverless/mcp-yandex-cloud-serverless"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-serverless/mcp-yandex-cloud-serverless"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
   description: "Manage serverless functions, API gateways, and containers"
   tags:
     - serverless
@@ -61,12 +61,12 @@ yandex-cloud-serverless:
     - faas
 
 yandex-cloud-iam:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-iam/mcp-yandex-cloud-iam"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-iam/mcp-yandex-cloud-iam"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
   description: "Manage IAM policies, roles, service accounts, and access bindings"
   tags:
     - iam
@@ -76,12 +76,12 @@ yandex-cloud-iam:
     - permissions
 
 yandex-cloud-ydb:
-  command: "${MCP_SERVERS_PATH}/mcp-yandex-cloud-ydb/mcp-yandex-cloud-ydb"
+  command: "/Users/depdiller/mcp-servers/servers/mcp-yandex-cloud-ydb/mcp-yandex-cloud-ydb"
   args:
     - --transport
     - stdio
   env:
-    ACCESS_TOKEN: "${YC_ACCESS_TOKEN}"
+    ACCESS_TOKEN: "y0__xDF9_Q-GMHdEyDjgteSEwns1DjnAaTnlsujPnB5cbsbsCCb"
   description: "Manage distributed YDB databases, tables, and queries"
   tags:
     - ydb
