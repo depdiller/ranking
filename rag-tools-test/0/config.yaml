@@ -10,21 +10,21 @@ node_lines:
     nodes:
       - node_type: retrieval
         strategy:
-          metrics: [ retrieval_f1, retrieval_recall, retrieval_precision,
-                     retrieval_ndcg, retrieval_map, retrieval_mrr ]
+#          metrics: [ retrieval_f1, retrieval_recall, retrieval_precision, retrieval_ndcg, retrieval_map, retrieval_mrr ]
+          metrics: [ retrieval_recall, retrieval_precision, retrieval_mrr ]
           speed_threshold: 10
-        top_k: 10
+        top_k: 25
         modules:
           - module_type: vectordb
             vectordb: chroma_sentence_transformers
       - node_type: passage_reranker
         strategy:
-          metrics: [retrieval_f1, retrieval_recall, retrieval_precision]
+          metrics: [ retrieval_recall, retrieval_precision, retrieval_mrr ]
           speed_threshold: 10
         top_k: 5
         modules:
           - module_type: pass_reranker
-          - module_type: tart
+#          - module_type: tart
 #          - module_type: monot5
 #          - module_type: upr
           - module_type: colbert_reranker
@@ -36,20 +36,20 @@ node_lines:
   - node_line_name: post_retrieve_node_line  # Arbitrary node line name
     nodes:
       - node_type: prompt_maker
-        strategy:
-          metrics:
-            - metric_name: bleu
-            - metric_name: meteor
-            - metric_name: rouge
-            - metric_name: sem_score
-              embedding_model: yandex_sentence_transformers
-          speed_threshold: 10
-          generator_modules:
-            - module_type: llama_index_llm
-              llm: anthropic
-              model: claude-sonnet-4-20250514
-              base_url: https://api.eliza.yandex.net/raw/anthropic
-              api_key: y1__xDl3MSRpdT-ARiuKyCc4dgCI97IX01agJKQ2rqtN3U7oV5CCeQ
+#        strategy:
+#          metrics:
+#            - metric_name: bleu
+#            - metric_name: meteor
+#            - metric_name: rouge
+#            - metric_name: sem_score
+#              embedding_model: yandex_sentence_transformers
+#          speed_threshold: 10
+#          generator_modules:
+#            - module_type: llama_index_llm
+#              llm: anthropic
+#              model: claude-sonnet-4-20250514
+#              base_url: https://api.eliza.yandex.net/raw/anthropic
+#              api_key: y1__xDl3MSRpdT-ARiuKyCc4dgCI97IX01agJKQ2rqtN3U7oV5CCeQ
         modules:
           - module_type: fstring
             prompt: "Answer the following question about Yandex Cloud infrastructure: how to {query}? \n.

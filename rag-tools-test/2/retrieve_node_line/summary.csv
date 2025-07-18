@@ -1,3 +1,0 @@
-node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
-retrieval,0.parquet,VectorDB,"{'top_k': 25, 'vectordb': 'chroma_sentence_transformers'}",0.0270723291997159
-passage_reranker,0.parquet,PassReranker,{'top_k': 5},9.03646597701512e-06

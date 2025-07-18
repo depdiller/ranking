@@ -1,0 +1,2 @@
+filename,module_name,module_params,execution_time,retrieval_recall,retrieval_precision,retrieval_mrr,is_best
+0.parquet,VectorDB,"{'top_k': 25, 'vectordb': 'chroma_sentence_transformers'}",0.028152686727922514,0.9943502824858758,0.03977401129943502,0.7664327380536649,True

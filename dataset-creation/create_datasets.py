@@ -532,7 +532,8 @@ async def create_qa_dataset(corpus_df):
             retrieval_gt = [[doc_id]]  # Use actual doc_id from corpus
             
             # Generation ground truth - just the tool name
-            generation_gt = tool_name
+            resource, method = _parse_tool_name(tool_name)
+            generation_gt = resource + method
             
             qa_data.append({
                 "qid": qid,
@@ -557,9 +558,9 @@ async def main():
     autorag_dir = Path("../data")
     autorag_dir.mkdir(exist_ok=True)
     
-    # Convert retrieval_gt to proper format before saving
-    # AutoRAG expects 2D list format, but parquet may convert to numpy arrays
-    qa_df['retrieval_gt'] = qa_df['retrieval_gt'].apply(lambda x: x if isinstance(x, list) else x.tolist())
+    # # Convert retrieval_gt to proper format before saving
+    # # AutoRAG expects 2D list format, but parquet may convert to numpy arrays
+    # qa_df['retrieval_gt'] = qa_df['retrieval_gt'].apply(lambda x: x if isinstance(x, list) else x.tolist())
     
     # Save datasets
     corpus_df.to_parquet(autorag_dir / "corpus.parquet", index=False)

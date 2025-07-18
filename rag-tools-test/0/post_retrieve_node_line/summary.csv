@@ -1,3 +1,0 @@
-node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
-prompt_maker,0.parquet,Fstring,"{'prompt': 'Answer the following question about Yandex Cloud infrastructure: how to {query}? \n. Info to retrieve answer from: {retrieved_contents} \n. Give as answer ONLY on word - name of tool you would use too solve given problem? Tool name must be retrieved from given context, if you cannot find correct tool there just answer - NONE.'}",8.381484599595659e-06
-generator,0.parquet,LlamaIndexLLM,"{'llm': 'anthropic', 'model': 'claude-sonnet-4-20250514', 'base_url': 'https://api.eliza.yandex.net/raw/anthropic', 'api_key': 'y1__xDl3MSRpdT-ARiuKyCc4dgCI97IX01agJKQ2rqtN3U7oV5CCeQ'}",3.9288501317581432

@@ -1,2 +1,0 @@
-filename,module_name,module_params,execution_time,retrieval_f1,retrieval_recall,retrieval_precision,retrieval_ndcg,retrieval_map,retrieval_mrr,is_best
-0.parquet,VectorDB,"{'top_k': 10, 'vectordb': 'chroma_sentence_transformers'}",0.02588689528154523,0.14198161389172628,0.7808988764044944,0.07808988764044943,0.6406558940554145,0.595658328874621,0.595658328874621,True

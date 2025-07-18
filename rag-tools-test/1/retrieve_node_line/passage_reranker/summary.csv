@@ -1,0 +1,5 @@
+filename,module_name,module_params,execution_time,passage_reranker_retrieval_recall,passage_reranker_retrieval_precision,passage_reranker_retrieval_mrr,is_best
+0.parquet,PassReranker,{'top_k': 5},8.655806719246557e-06,0.8898305084745762,0.17796610169491522,0.7564030131826741,False
+1.parquet,ColbertReranker,{'top_k': 5},0.3068223753891422,0.7768361581920904,0.1553672316384181,0.6196798493408663,False
+2.parquet,SentenceTransformerReranker,{'top_k': 5},0.03126009035918672,0.7401129943502824,0.14802259887005648,0.5943502824858757,False
+3.parquet,FlagEmbeddingReranker,{'top_k': 5},0.9459950593905261,0.9463276836158192,0.1892655367231638,0.7911487758945386,True

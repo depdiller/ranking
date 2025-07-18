@@ -10,8 +10,8 @@ node_lines:
     nodes:
       - node_type: retrieval
         strategy:
-          metrics: [ retrieval_f1, retrieval_recall, retrieval_precision,
-                     retrieval_ndcg, retrieval_map, retrieval_mrr ]
+#          metrics: [ retrieval_f1, retrieval_recall, retrieval_precision, retrieval_ndcg, retrieval_map, retrieval_mrr ]
+          metrics: [ retrieval_recall, retrieval_precision, retrieval_mrr ]
           speed_threshold: 10
         top_k: 25
         modules:
@@ -19,13 +19,13 @@ node_lines:
             vectordb: chroma_sentence_transformers
       - node_type: passage_reranker
         strategy:
-          metrics: [retrieval_f1, retrieval_recall, retrieval_precision]
+          metrics: [ retrieval_recall, retrieval_precision, retrieval_mrr ]
           speed_threshold: 10
         top_k: 5
         modules:
           - module_type: pass_reranker
 #          - module_type: tart
-          - module_type: monot5
+#          - module_type: monot5
 #          - module_type: upr
           - module_type: colbert_reranker
           - module_type: sentence_transformer_reranker
@@ -39,7 +39,7 @@ node_lines:
         strategy:
           metrics:
             - metric_name: bleu
-            - metric_name: meteor
+#            - metric_name: meteor
             - metric_name: rouge
             - metric_name: sem_score
               embedding_model: yandex_sentence_transformers
@@ -60,7 +60,7 @@ node_lines:
         strategy:
           metrics:
             - metric_name: bleu
-            - metric_name: meteor
+#            - metric_name: meteor
             - metric_name: rouge
             - metric_name: sem_score
               embedding_model: yandex_sentence_transformers

@@ -1,0 +1,6 @@
+filename,module_name,module_params,execution_time,passage_reranker_retrieval_recall,passage_reranker_retrieval_precision,passage_reranker_retrieval_mrr,is_best
+0.parquet,PassReranker,{'top_k': 5},9.982599376958642e-06,0.8898305084745762,0.17796610169491522,0.7564030131826741,False
+1.parquet,FlagEmbeddingReranker,{'top_k': 5},0.941046771356615,0.9463276836158192,0.1892655367231638,0.7911487758945386,True
+2.parquet,FlagEmbeddingLLMReranker,{'top_k': 5},13.41690426290372,0.9774011299435028,0.19548022598870055,0.890065913370998,False
+3.parquet,OpenVINOReranker,{'top_k': 5},1.2127185164198364,0.9378531073446328,0.18757062146892653,0.7879472693032015,False
+4.parquet,FlashRankReranker,{'top_k': 5},0.011913412708347127,0.7231638418079096,0.1446327683615819,0.528060263653484,False

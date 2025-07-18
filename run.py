@@ -9,11 +9,11 @@ autorag.generator_models['anthropic'] = Anthropic
 # validator = Validator(qa_data_path='data/qa.parquet', corpus_data_path='data/corpus.parquet')
 # validator.validate('config.yaml')
 
-# evaluator = Evaluator(qa_data_path='data/qa.parquet', corpus_data_path='data/corpus.parquet',
-#                       project_dir='rag-tools-test')
-# evaluator.start_trial('config.yaml', skip_validation=True, full_ingest=False)
+evaluator = Evaluator(qa_data_path='data/qa.parquet', corpus_data_path='data/corpus.parquet',
+                      project_dir='rag-tools-test')
+evaluator.start_trial('config.yaml', skip_validation=True, full_ingest=False)
 
-# run(trial_dir='rag-tools-test/2')
+# run(trial_dir='rag-tools-test/3')
 
 # from autorag.deploy import ApiRunner
 # import nest_asyncio
@@ -29,7 +29,7 @@ autorag.generator_models['anthropic'] = Anthropic
 # runner.run_web()
 
 
-from autorag.deploy import Runner
-
-runner = Runner.from_trial_folder('rag-tools-test/2')
-runner.run('How to create instances?')
+# from autorag.deploy import Runner
+#
+# runner = Runner.from_trial_folder('rag-tools-test/2')
+# runner.run('How to create instances?')

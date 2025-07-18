@@ -1,0 +1,2 @@
+filename,module_name,module_params,execution_time,average_prompt_token,is_best
+0.parquet,Fstring,"{'prompt': 'Answer the following question about Yandex Cloud infrastructure: how to {query}? \n. Info to retrieve answer from: {retrieved_contents} \n. Give as answer ONLY on word - name of tool you would use too solve given problem? Tool name must be retrieved from given context, if you cannot find correct tool there just answer - NONE.'}",8.974371656859662e-06,184.44350282485877,True
