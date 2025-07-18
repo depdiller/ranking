@@ -479,7 +479,8 @@ async def create_corpus_dataset():
             continue
         except Exception as e:
             print(f"Failed to fetch tools from {server_id}: {e}")
-            continue
+            raise e
+            # continue
 
     corpus_df = pd.DataFrame(corpus_data)
     return corpus_df
